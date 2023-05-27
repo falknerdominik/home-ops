@@ -26,3 +26,8 @@ This repository contains scripts to privision and manage my devices (sorry no cr
 - [] Information gathere with ansible
 - [] Auto-Provision brew
 - [] Auto-Provision standard packages
+
+## TODO Notebook Work
+- [] Information gathere with ansible
+- [] Auto-Provision brew
+- [x] Auto-Provision standard packages
