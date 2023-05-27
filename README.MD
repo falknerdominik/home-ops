@@ -2,6 +2,10 @@
 
 This repository contains scripts to privision and manage my devices (sorry no credentials can be found here). 
 
+## OPs Repo
+- [ ] Use YamlLint
+- [ ] Auto VCS Versions
+
 ## TODO Home Server
 - [ ] Create basic ansible playbook for gather state from server (manjaro based)
 - [ ] Create basic ansible playbook for privisioning
