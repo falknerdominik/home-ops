@@ -1,0 +1,42 @@
+---
+- name: Extract System Information on macOS
+  hosts: localhost
+  gather_facts: yes
+  tasks:
+    - name: Gather system facts
+      setup:
+        filter: ansible_*_mbp_model
+      register: system_info
+
+    # - name: Extract system information
+      # set_fact:
+        # system_data:
+          # model: "{{ system_info.ansible_product_name }}"
+          # manufacturer: Apple
+          # serial_number: "{{ system_info.ansible_product_serial }}"
+          # os_version: "{{ ansible_distribution_version }}"
+
+    - name: Print system information in JSON format
+      debug:
+        var: system_info
+        verbosity: 1
+
+    # - name: Print system information in plain text
+    #   debug:
+    #     msg: |-
+    #       System Information:
+    #       Model: {{ system_data.model }}
+    #       Manufacturer: {{ system_data.manufacturer }}
+    #       Serial Number: {{ system_data.serial_number }}
+    #       OS Version: {{ system_data.os_version }}
+
+    - name: Write system information to a file
+      copy:
+        # content: |-
+        #   System Information:
+        #   Model: {{ system_data.model }}
+        #   Manufacturer: {{ system_data.manufacturer }}
+        #   Serial Number: {{ system_data.serial_number }}
+        #   OS Version: {{ system_data.os_version }}
+        content: "{{ system_info | to_json }}"
+        dest: ~/system_information.txt

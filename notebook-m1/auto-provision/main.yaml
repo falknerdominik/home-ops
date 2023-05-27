@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  connection: local
+  vars_files:
+     - config.yaml
+
+  roles:
+    - role: geerlingguy.homebrew

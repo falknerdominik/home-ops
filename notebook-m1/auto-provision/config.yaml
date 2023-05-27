@@ -1,0 +1,65 @@
+# this file auto overwrites any software installed by default by the geerlingguy.homebrew
+# for a whole list of variables see geerlingguy.homebrew/defaults/main.yml
+# 
+
+# casks
+homebrew_installed_packages:
+  - go
+  - ansible
+  - aspell
+  - cmake
+  - eigen
+  - fish
+  - fisher
+  - freetype
+  - gcc
+  - git
+  - git-chglog
+  - imagemagick
+  - jq
+  - neovim
+  - openblas
+  - openexr
+  - openjdk
+  - openjdk@11
+  - openssl@1.1
+  - openssl@3
+  - pandoc
+  - powerline-go
+  - python@3.10
+  - python@3.11
+  - python@3.9
+  - python@3.8
+  - syft
+  - tree
+
+homebrew_cask_apps:
+  - chromium
+  - docker
+  - drawio
+  - firefox
+  - iterm2
+  - keepassxc
+  - macs-fan-control
+  - meld
+  - microsoft-auto-update
+  - microsoft-azure-storage-explorer
+  - microsoft-office
+  - microsoft-remote-desktop
+  - microsoft-teams
+  - nrlquaker-winbox
+  - odbc-manager
+  - signal
+  - spotify
+  - twine
+  - visual-studio-code
+  - xmind
+  - zotero
+
+mas_installed_apps:
+  - { id: 443987910, name: "1Password" }
+
+configure_dock: true
+dockitems_remove:
+  - Launchpad
+  - TV
